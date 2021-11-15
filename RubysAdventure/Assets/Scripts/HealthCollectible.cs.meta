@@ -3,7 +3,10 @@ guid: c970e88e32a497f4ca33410e94cdcc3e
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - collectedClip: {instanceID: 0}
+  - pickupEffect: {fileID: 703512266312106931, guid: 96e9cd9955be74842b5d6b2e427ffe16,
+      type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

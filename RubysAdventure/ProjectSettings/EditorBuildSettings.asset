@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/RubysAdventure.unity
     guid: 68a565149e0fc5a4aba0624edfac2fe4
+  - enabled: 1
+    path: Assets/Scenes/Level 2.unity
+    guid: 8efc76133e1d4d2458e3b8b75c09f9df
   m_configObjects: {}

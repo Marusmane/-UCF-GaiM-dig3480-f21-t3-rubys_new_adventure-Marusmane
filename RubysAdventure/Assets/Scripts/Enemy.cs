@@ -1,12 +1,13 @@
 ﻿using System;
 using UnityEngine;
-
+using TMPro;
 
 
 public class Enemy : MonoBehaviour
 {
-	
+
 	public float speed;
+	
 	public float timeToChange;
 	public bool horizontal;
 
@@ -17,14 +18,17 @@ public class Enemy : MonoBehaviour
 	public AudioClip fixedSound;
 
 	Rigidbody2D rigidbody2d;
+
+	
+
 	float remainingTimeToChange;
 	Vector2 direction = Vector2.right;
 	bool repaired = false;
 
-	
+
 	Animator animator;
 
-	
+
 	AudioSource audioSource;
 
 	void Start()
@@ -37,8 +41,11 @@ public class Enemy : MonoBehaviour
 		animator = GetComponent<Animator>();
 
 		audioSource = GetComponent<AudioSource>();
+
+		
 	}
 
+	
 	void Update()
 	{
 		if (repaired)
@@ -79,10 +86,11 @@ public class Enemy : MonoBehaviour
 
 		smokeParticleEffect.SetActive(false);
 
-	
+
 		Instantiate(fixedParticleEffect, transform.position + Vector3.up * 0.5f, Quaternion.identity);
 
 		
+
 		rigidbody2d.simulated = false;
 
 		audioSource.Stop();

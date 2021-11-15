@@ -1,9 +1,15 @@
 ﻿using UnityEngine;
 
 
+
 public class Projectile : MonoBehaviour
 {
     Rigidbody2D rigidbody2d;
+   
+   
+    
+   
+  
     
     void Awake()
     {
@@ -31,8 +37,27 @@ public class Projectile : MonoBehaviour
         if (e != null)
         {
             e.Fix();
-        }
+
+         }
         
         Destroy(gameObject);
+
+        Boss d = other.collider.GetComponent<Boss>();
+
+
+        if (d != null)
+        {
+            d.Fix();
+
+                  }
+
+        Destroy(gameObject);
+
+
     }
+    
+
+
+
 }
+

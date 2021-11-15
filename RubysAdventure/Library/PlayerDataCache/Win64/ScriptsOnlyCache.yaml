@@ -1,10 +1,12 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - Boss
     - DamageZone
     - Enemy
     - HealthCollectible
     - NonPlayerCharacter
+    - PowerUp
     - Projectile
     - RubyController
     - UIHealthBar
@@ -23,6 +25,7 @@ ScriptsOnlyBuild:
     - UnityEditor.U2D.IK.IKEditorManagerHelper
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridBrush
+    - UnityEditor.Tilemaps.GridBrushEditor
     - UnityEditor.Tilemaps.GridPaintPaletteClipboard
     - UnityEditor.Tilemaps.GridPaintPaletteWindow
     - UnityEditor.Tilemaps.GridPaintingState
@@ -137,19 +140,23 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3396}
     - Class: 114
-      Script: {instanceID: 3944}
+      Script: {instanceID: 3742}
     - Class: 114
-      Script: {instanceID: 4068}
+      Script: {instanceID: 3946}
     - Class: 114
-      Script: {instanceID: 4348}
+      Script: {instanceID: 4070}
     - Class: 114
-      Script: {instanceID: 4578}
+      Script: {instanceID: 4350}
     - Class: 114
-      Script: {instanceID: 4932}
+      Script: {instanceID: 4580}
     - Class: 114
-      Script: {instanceID: 5322}
+      Script: {instanceID: 4934}
     - Class: 114
-      Script: {instanceID: 5336}
+      Script: {instanceID: 5324}
+    - Class: 114
+      Script: {instanceID: 5340}
+    - Class: 114
+      Script: {instanceID: 5978}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -619,6 +626,12 @@ ScriptsOnlyBuild:
     className: TextContainer
   - hash:
       serializedVersion: 2
+      Hash: c49d470f8f12e0e1397d3aff51d8b321
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Boss
+  - hash:
+      serializedVersion: 2
       Hash: 8aa3d6ccbcb54ee8db6c1229854adaaa
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -943,7 +956,7 @@ ScriptsOnlyBuild:
     className: TMP_SubMeshUI
   - hash:
       serializedVersion: 2
-      Hash: e8565efb283f358a6685935463171ae7
+      Hash: 6c0082ed6eb0cad3cb256400650ab9be
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: HealthCollectible
@@ -1043,7 +1056,13 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.IK.Runtime.dll
     namespaceName: UnityEngine.U2D.IK
     className: FabrikSolver2D
+  - hash:
+      serializedVersion: 2
+      Hash: 29bdf1b0ec7d02c58dc8e9aa430025cd
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PowerUp
   platform: 19
   scenePathNames:
   - Assets/Scenes/RubysAdventure.unity
-  playerPath: C:/Users/galen/OneDrive/Desktop/RubysAdventure/RubysAdventure/Builds/RubysAdventure.exe
+  playerPath: C:/Users/galen/OneDrive/Desktop/RubysAdventure/RubysAdventure/Build/RubysAdventure.exe

@@ -231,6 +231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
+  countText: {fileID: 0}
   timeToChange: 2
   horizontal: 1
   smokeParticleEffect: {fileID: 7972057267707664465}
@@ -277,7 +278,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 3.618211
+  MinDistance: 1.8165174
   MaxDistance: 4.6564226
   Pan2D: 0
   rolloffMode: 0
