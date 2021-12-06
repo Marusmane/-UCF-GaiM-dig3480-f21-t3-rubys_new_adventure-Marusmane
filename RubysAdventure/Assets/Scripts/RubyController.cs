@@ -6,20 +6,20 @@ public class RubyController : MonoBehaviour
 {
 
     public float speed = 4;
-    
+
     public int maxHealth = 5;
     public float timeInvincible = 2.0f;
     public Transform respawnPosition;
     public ParticleSystem hitParticle;
-    
+
 
     public GameObject projectilePrefab;
 
-    
+
     public AudioClip hitSound;
     public AudioClip shootingSound;
 
-
+    public int count;
     public int health
     {
         get { return currentHealth; }
@@ -55,7 +55,7 @@ public class RubyController : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
 
     }
-    
+
 
     void Update()
     {
@@ -81,7 +81,7 @@ public class RubyController : MonoBehaviour
 
         currentInput = move;
 
-        
+
 
 
         animator.SetFloat("Look X", lookDirection.x);
@@ -160,7 +160,7 @@ public class RubyController : MonoBehaviour
         animator.SetTrigger("Launch");
         audioSource.PlayOneShot(shootingSound);
 
-       
+
     }
 
 
@@ -169,5 +169,5 @@ public class RubyController : MonoBehaviour
         audioSource.PlayOneShot(clip);
     }
 
-    
+
 }

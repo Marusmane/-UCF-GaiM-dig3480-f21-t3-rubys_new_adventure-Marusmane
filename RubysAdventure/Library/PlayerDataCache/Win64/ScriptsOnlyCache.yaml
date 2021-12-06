@@ -1,7 +1,9 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - BackgroundMusic
     - Boss
+    - Croak
     - DamageZone
     - Enemy
     - HealthCollectible
@@ -9,6 +11,7 @@ ScriptsOnlyBuild:
     - PowerUp
     - Projectile
     - RubyController
+    - SwitchMusicTrigger
     - UIHealthBar
     Cinemachine.dll:
     - Cinemachine.CinemachineBrain
@@ -25,7 +28,6 @@ ScriptsOnlyBuild:
     - UnityEditor.U2D.IK.IKEditorManagerHelper
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridBrush
-    - UnityEditor.Tilemaps.GridBrushEditor
     - UnityEditor.Tilemaps.GridPaintPaletteClipboard
     - UnityEditor.Tilemaps.GridPaintPaletteWindow
     - UnityEditor.Tilemaps.GridPaintingState
@@ -47,10 +49,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -64,7 +64,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Image
     - UnityEngine.UI.Mask
   sceneClasses:
-    Assets/Scenes/RubysAdventure.unity:
+    Assets/Scenes/RubysFinalAdventure.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -110,53 +110,59 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1540}
     - Class: 114
-      Script: {instanceID: 1872}
+      Script: {instanceID: 1876}
     - Class: 114
-      Script: {instanceID: 2056}
+      Script: {instanceID: 2060}
     - Class: 114
-      Script: {instanceID: 2274}
+      Script: {instanceID: 2278}
     - Class: 114
-      Script: {instanceID: 2656}
+      Script: {instanceID: 2660}
     - Class: 114
-      Script: {instanceID: 2674}
+      Script: {instanceID: 2678}
     - Class: 114
-      Script: {instanceID: 2728}
+      Script: {instanceID: 2732}
     - Class: 114
-      Script: {instanceID: 2746}
+      Script: {instanceID: 2750}
     - Class: 114
-      Script: {instanceID: 2812}
+      Script: {instanceID: 2816}
     - Class: 114
-      Script: {instanceID: 2908}
+      Script: {instanceID: 2912}
     - Class: 114
-      Script: {instanceID: 2956}
+      Script: {instanceID: 2960}
     - Class: 114
-      Script: {instanceID: 2966}
+      Script: {instanceID: 2970}
     - Class: 114
-      Script: {instanceID: 2994}
+      Script: {instanceID: 2998}
     - Class: 114
-      Script: {instanceID: 3136}
+      Script: {instanceID: 3062}
     - Class: 114
-      Script: {instanceID: 3266}
+      Script: {instanceID: 3142}
     - Class: 114
-      Script: {instanceID: 3396}
+      Script: {instanceID: 3272}
     - Class: 114
-      Script: {instanceID: 3742}
+      Script: {instanceID: 3402}
     - Class: 114
-      Script: {instanceID: 3946}
+      Script: {instanceID: 3436}
     - Class: 114
-      Script: {instanceID: 4070}
+      Script: {instanceID: 3750}
     - Class: 114
-      Script: {instanceID: 4350}
+      Script: {instanceID: 3954}
     - Class: 114
-      Script: {instanceID: 4580}
+      Script: {instanceID: 4078}
     - Class: 114
-      Script: {instanceID: 4934}
+      Script: {instanceID: 4358}
     - Class: 114
-      Script: {instanceID: 5324}
+      Script: {instanceID: 4588}
     - Class: 114
-      Script: {instanceID: 5340}
+      Script: {instanceID: 4790}
     - Class: 114
-      Script: {instanceID: 5978}
+      Script: {instanceID: 4944}
+    - Class: 114
+      Script: {instanceID: 5334}
+    - Class: 114
+      Script: {instanceID: 5350}
+    - Class: 114
+      Script: {instanceID: 5988}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -260,6 +266,12 @@ ScriptsOnlyBuild:
     className: LayoutElement
   - hash:
       serializedVersion: 2
+      Hash: f36bc5c422d47d6726596e60001071e3
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SpeedUp
+  - hash:
+      serializedVersion: 2
       Hash: 6bc76e17f0d5e93f3eea7f5a2fe227f3
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -294,6 +306,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Shadow
+  - hash:
+      serializedVersion: 2
+      Hash: ade37ec6cd1f8ab0a386a0cd23a47272
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AudioScript
   - hash:
       serializedVersion: 2
       Hash: 300fd99066f8c288e85f5e81ce65fe34
@@ -470,7 +488,7 @@ ScriptsOnlyBuild:
     className: TextMeshProUGUI
   - hash:
       serializedVersion: 2
-      Hash: c1c4a6c925810553a210d1f841424fb1
+      Hash: 1ffc0d79889d538e7dc17f378c1476fc
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: RubyController
@@ -486,6 +504,12 @@ ScriptsOnlyBuild:
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
     className: CinemachineHardLookAt
+  - hash:
+      serializedVersion: 2
+      Hash: f07fc1b17b44cea1c26fd950cccd98d6
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Croak
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -576,6 +600,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: MarkerTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 98b9959a6659b5415224c857edf3dd9e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SwitchMusicTrigger
   - hash:
       serializedVersion: 2
       Hash: 23066ceca838af0cf02e00e3cf5155c1
@@ -770,7 +800,7 @@ ScriptsOnlyBuild:
     className: CinemachineShot
   - hash:
       serializedVersion: 2
-      Hash: 3520d9b963d9c53fa50efe61cf8f7ffe
+      Hash: 2db1fe998b83a2922042e89a29cf9c67
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: NonPlayerCharacter
@@ -858,6 +888,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: SignalReceiver
+  - hash:
+      serializedVersion: 2
+      Hash: c7dfb87a21721fd3ddc6eb4134d2c91a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BackgroundMusic
   - hash:
       serializedVersion: 2
       Hash: 040dd48e3a027d5424519a5fa2009df4
@@ -1064,5 +1100,6 @@ ScriptsOnlyBuild:
     className: PowerUp
   platform: 19
   scenePathNames:
-  - Assets/Scenes/RubysAdventure.unity
-  playerPath: C:/Users/galen/OneDrive/Desktop/RubysAdventure/RubysAdventure/Build/RubysAdventure.exe
+  - Assets/Scenes/RubysFinalAdventure.unity
+  playerPath: C:/Users/galen/OneDrive/Desktop/RubysAdventure/RubysAdventure/Final
+    Build/RubysAdventure.exe
